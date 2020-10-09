@@ -14,6 +14,7 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
+  test
 }) => (
   <div>
     <div
@@ -36,6 +37,8 @@ export const IndexPageTemplate = ({
           flexDirection: 'column',
         }}
       >
+        
+
         <h1
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
@@ -49,6 +52,7 @@ export const IndexPageTemplate = ({
         >
           {title}
         </h1>
+        
         <h3
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
@@ -84,6 +88,7 @@ export const IndexPageTemplate = ({
                       {heading}
                     </h3>
                     <p>{description}</p>
+                    {mainpitch.test}
                   </div>
                 </div>
                 <Features gridItems={intro.blurbs} />
@@ -171,6 +176,7 @@ export const pageQuery = graphql`
         mainpitch {
           title
           description
+          test
         }
         description
         intro {
